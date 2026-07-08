@@ -30,3 +30,36 @@
 .animate-fade-in {
   animation: fadeIn 0.3s ease-out forwards;
 }
+
+/* Portfolio readability pass: keep dense SaaS layout, but avoid tiny text. */
+#applet-shell .text-xs {
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+}
+
+#applet-shell [class~="text-[11px]"] {
+  font-size: 0.75rem;
+  line-height: 1.05rem;
+}
+
+#applet-shell [class~="text-[10px]"] {
+  font-size: 0.6875rem;
+  line-height: 0.95rem;
+}
+
+@media (max-width: 640px) {
+  #applet-shell .text-xs {
+    font-size: 0.875rem;
+    line-height: 1.35rem;
+  }
+
+  #applet-shell [class~="text-[11px]"] {
+    font-size: 0.8125rem;
+    line-height: 1.2rem;
+  }
+
+  #applet-shell [class~="text-[10px]"] {
+    font-size: 0.75rem;
+    line-height: 1.05rem;
+  }
+}

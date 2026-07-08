@@ -216,7 +216,7 @@ export default function App() {
     <div className="min-h-screen bg-linear-to-b from-slate-100 via-slate-50 to-slate-100/60 flex flex-col font-sans" id="applet-shell">
       
       {/* DYNAMIC TOP NAVIGATION BAR - iOS Translucent style */}
-      <header className="sticky top-0 z-50 backdrop-blur-md bg-white/75 border-b border-slate-200/50 px-6 py-3.5 shrink-0 flex flex-col lg:flex-row items-center justify-between gap-4" id="header">
+      <header className="sticky top-0 z-50 backdrop-blur-md bg-white/75 border-b border-slate-200/50 px-4 sm:px-6 py-3 sm:py-3.5 shrink-0 flex flex-col lg:flex-row items-center justify-between gap-3 lg:gap-4" id="header">
         
         {/* Left Side Brand Logo */}
         <div className="flex items-center gap-2.5">
@@ -231,7 +231,7 @@ export default function App() {
 
         {/* Center Side: Top Navigation Links (Managers/Admins only) */}
         {isAdmin && (
-          <nav className="flex flex-wrap items-center justify-center gap-1 bg-slate-100/80 p-1.5 rounded-xl border border-slate-200/40 max-w-full overflow-x-auto" id="top-nav-tabs">
+          <nav className="flex flex-nowrap items-center justify-start sm:justify-center gap-1 bg-slate-100/80 p-1.5 rounded-xl border border-slate-200/40 w-full lg:w-auto max-w-full overflow-x-auto" id="top-nav-tabs">
             <button
               onClick={() => setActiveView("dashboard")}
               className={`text-xs font-bold px-2.5 sm:px-3.5 py-2 rounded-lg transition-all flex items-center gap-1.5 cursor-pointer shrink-0 ${
@@ -296,7 +296,7 @@ export default function App() {
         )}
 
         {/* Right Side: Demo User Switcher Selector & Active Profile */}
-        <div className="flex flex-wrap items-center gap-3">
+        <div className="flex flex-wrap lg:flex-nowrap items-center justify-between sm:justify-center lg:justify-end gap-2 sm:gap-3 w-full lg:w-auto">
           <button
             onClick={handleOpenCaseStudy}
             className={`text-[11px] font-extrabold px-3 py-1.5 rounded-lg border transition-all flex items-center gap-1.5 cursor-pointer uppercase tracking-wider ${
@@ -315,12 +315,12 @@ export default function App() {
             </span>
           )}
 
-          <div className="flex items-center gap-2 bg-slate-100/90 border border-slate-200/50 rounded-xl pl-3 pr-2 py-1.5">
+          <div className="flex items-center gap-2 bg-slate-100/90 border border-slate-200/50 rounded-xl pl-3 pr-2 py-1.5 flex-1 sm:flex-none min-w-0 lg:max-w-[330px]">
             <span className="text-[10px] font-black text-slate-500 uppercase tracking-widest hidden sm:inline">Simular Rol:</span>
             <select
               value={currentUser.id === "admin-1" ? "admin-1" : currentUser.id}
               onChange={(e) => handleUserPersonaSwitch(e.target.value)}
-              className="bg-transparent text-xs text-slate-800 font-extrabold focus:outline-hidden cursor-pointer"
+              className="bg-transparent text-xs text-slate-800 font-extrabold focus:outline-hidden cursor-pointer min-w-0 w-full sm:w-auto"
               id="role-simulator-dropdown"
             >
               <option value="admin-1">Sofía Rivas (Directora Formación)</option>
@@ -332,7 +332,7 @@ export default function App() {
             </select>
           </div>
 
-          <div className="flex items-center gap-2.5 border-l border-slate-200 pl-3">
+          <div className="hidden sm:flex items-center gap-2.5 border-l border-slate-200 pl-3">
             <img 
               src={currentUser.avatar} 
               alt={currentUser.name} 
