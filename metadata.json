@@ -1,0 +1,6 @@
+{
+  "name": "Noa Motors Academy",
+  "description": "Plataforma de capacitación corporativa asistida por IA para asesores de venta, postventa y personal técnico de Noa Motors.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
