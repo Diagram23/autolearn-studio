@@ -306,7 +306,7 @@ export default function App() {
             }`}
             id="btn-case-study"
           >
-            <Sparkles className="w-3 h-3 text-red-500" /> Case Study
+            <Sparkles className="w-3 h-3 text-red-500" /> Caso UX
           </button>
 
           {!isAdmin && (

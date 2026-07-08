@@ -205,7 +205,7 @@ export default function CaseStudyView({ onExploreProduct }: CaseStudyViewProps) 
         <div className="absolute right-0 top-0 bottom-0 w-1/2 bg-radial-gradient from-red-600/10 to-transparent pointer-events-none" />
         <div className="relative z-10 max-w-3xl space-y-4">
           <span className="bg-red-600/20 border border-red-500/30 text-red-300 text-[11px] font-bold px-2.5 py-1 rounded-md uppercase tracking-wider inline-flex items-center gap-1.5">
-            <Sparkles className="w-3.5 h-3.5" /> Case Study de Producto
+            <Sparkles className="w-3.5 h-3.5" /> Caso de Producto
           </span>
           <h1 className="text-2xl md:text-3xl font-black tracking-tight">AutoLearn Studio</h1>
           <p className="text-sm text-slate-300 leading-relaxed">
@@ -215,7 +215,7 @@ export default function CaseStudyView({ onExploreProduct }: CaseStudyViewProps) 
             para SaaS B2B de formación corporativa, no una integración de IA productiva.
           </p>
           <div className="flex flex-wrap gap-2 pt-1">
-            {["Product Thinking", "B2B SaaS", "AI-assisted workflows", "Design System"].map((tag) => (
+            {["Pensamiento de Producto", "SaaS B2B", "Flujos asistidos por IA", "Sistema de Diseño"].map((tag) => (
               <span key={tag} className="bg-slate-800 border border-slate-700 text-slate-300 text-[11px] font-semibold px-2.5 py-1 rounded-md">
                 {tag}
               </span>

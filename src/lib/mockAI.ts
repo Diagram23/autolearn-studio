@@ -46,31 +46,31 @@ function simulateDelay<T>(result: T, ms: number): Promise<T> {
  */
 export function generateMockupCourse(title: string, category: string): GeneratedCourse {
   return {
-    title: title || "New Vehicle Onboarding",
+    title: title || "Onboarding del Nuevo Vehículo",
     category: category || "Vehicle Knowledge",
     modules: [
       {
         id: "m1",
-        title: "Introduction and Fundamentals",
-        description: "Understanding the primary product details and core values.",
+        title: "Introducción y Fundamentos",
+        description: "Comprensión de los atributos principales del producto, propuesta de valor y mensajes clave para la red comercial.",
         lessons: [
           {
             id: "l1",
-            title: "Core Mechanics & Key USP",
-            content: "This lesson details the primary specifications of our flagship line. Dealership employees must memorize the powertrain, infotainment, and core warranty aspects to present to clients. Highlighting the balance of efficiency and electric range is key to answering early client inquiries.",
+            title: "Mecánica Principal y Propuesta de Valor",
+            content: "Esta lección resume las especificaciones principales de la gama insignia de Noa Motors. Los equipos de concesionario deben dominar tren motriz, infoentretenimiento, autonomía eléctrica y cobertura de garantía para explicarlos con precisión al cliente. La clave comercial es conectar eficiencia, seguridad y coste total de propiedad con necesidades reales de uso.",
             quiz: {
-              question: "What is the primary selling point of the vehicle's updated powertrain?",
-              options: ["Class-leading fuel efficiency & hybrid battery performance", "Basic mechanical steering option", "Classic legacy styling only"],
+              question: "¿Cuál es el argumento principal del tren motriz actualizado?",
+              options: ["Eficiencia energética líder y rendimiento avanzado de batería", "Dirección mecánica básica como elemento diferencial", "Estética clásica sin mejoras técnicas relevantes"],
               correctOptionIndex: 0
             }
           },
           {
             id: "l2",
-            title: "Customer Persona Profiling",
-            content: "Identify what the family/executive buyer values: safety ratings, interior space, resale value. When dealing with luxury buyers, prioritize concierge service benefits, extended warranties, and premium cabin technology. Standard buyers will appreciate cost of ownership analysis.",
+            title: "Perfilado de Cliente y Necesidades de Compra",
+            content: "Identifique qué valora cada perfil: seguridad, espacio interior, coste de uso, valor residual o experiencia premium. En compradores familiares, priorice asistentes de seguridad y habitabilidad. En perfiles ejecutivos, destaque servicio posventa, garantías ampliadas y tecnología de cabina. En compradores sensibles al precio, convierta la conversación en coste total de propiedad.",
             quiz: {
-              question: "Which feature should you highlight first for family-oriented buyers?",
-              options: ["Maximum speed benchmark", "Cargo capacity and standard active safety suites", "Custom alloy wheels options"],
+              question: "¿Qué debe destacarse primero ante un comprador familiar?",
+              options: ["Velocidad máxima como dato principal", "Capacidad de carga y sistemas avanzados de seguridad de serie", "Opciones estéticas de llantas personalizadas"],
               correctOptionIndex: 1
             }
           }
@@ -78,26 +78,26 @@ export function generateMockupCourse(title: string, category: string): Generated
       },
       {
         id: "m2",
-        title: "Sales Tactics & Delivery Process",
-        description: "Overcoming standard objections and executing the final delivery checklist.",
+        title: "Tácticas Comerciales y Entrega del Vehículo",
+        description: "Resolución de objeciones habituales y ejecución del protocolo final de entrega.",
         lessons: [
           {
             id: "l3",
-            title: "Handling Financing Objections",
-            content: "Discussing APR, lease versus loan advantages, and presentation of protection packages like extended warranty or tire/wheel care. Frame financing as a monthly budget builder rather than a total debt number to ease tension.",
+            title: "Gestión de Objeciones de Financiación",
+            content: "Explique TAE, renting frente a préstamo tradicional y paquetes de protección como garantía extendida o cobertura de neumáticos. Presente la financiación como una forma de ajustar presupuesto mensual y proteger el activo, evitando que la conversación se centre únicamente en la deuda total.",
             quiz: {
-              question: "What is the best response when a buyer objects to standard interest rates?",
-              options: ["Dismiss the objection or tell them rates are fixed", "Present promotional low-APR financing or lease trade-in comparisons", "Tell them to try another financing bank individually"],
+              question: "¿Cuál es la mejor respuesta cuando un cliente objeta el tipo de interés?",
+              options: ["Restar importancia a la objeción y decir que las condiciones son inamovibles", "Presentar alternativas promocionales, renting o comparativas con recompra garantizada", "Indicarle que busque financiación por su cuenta sin acompañamiento"],
               correctOptionIndex: 1
             }
           },
           {
             id: "l4",
-            title: "The Ultimate Vehicle Delivery Checklist",
-            content: "Pairing the client's phone via Bluetooth, setting up standard dealership application/subscription services, showing driver assistance toggles, and introducing the client to the service department manager before departure.",
+            title: "Checklist Profesional de Entrega",
+            content: "Antes de la salida del cliente, empareje su teléfono, configure la app Noa, active servicios conectados, explique los asistentes de conducción y presente al responsable de posventa. Este cierre convierte la entrega en una experiencia de confianza y mejora la retención futura.",
             quiz: {
-              question: "Why should you introduce the customer to the service manager before they drive off?",
-              options: ["To secure high retention and build trust in future maintenance visits", "To make the final checkout paperwork take longer", "It is an optional social step with no business impact"],
+              question: "¿Por qué conviene presentar al cliente al responsable de posventa antes de la entrega?",
+              options: ["Para reforzar confianza y aumentar la probabilidad de futuras visitas de mantenimiento", "Para alargar innecesariamente el cierre administrativo", "Es un gesto opcional sin impacto comercial"],
               correctOptionIndex: 0
             }
           }
@@ -105,26 +105,26 @@ export function generateMockupCourse(title: string, category: string): Generated
       },
       {
         id: "m3",
-        title: "Aftersales & Care Retention",
-        description: "Nurturing relationships and driving service bay returns.",
+        title: "Posventa, Cuidado y Retención",
+        description: "Construcción de relación a largo plazo y retorno del cliente al servicio oficial.",
         lessons: [
           {
             id: "l5",
-            title: "Scheduling the First Service Visit",
-            content: "Automotive dealerships build lifetime profits in the service bay. Set expectations for the 5,000-mile or 6-month checkup. Highlight complimentary maintenance packages.",
+            title: "Programación de la Primera Visita de Servicio",
+            content: "La rentabilidad recurrente de un concesionario se construye en posventa. Fije expectativas claras para la revisión de 8.000 km o 6 meses, explique el valor del mantenimiento preventivo y destaque paquetes incluidos o complementarios cuando correspondan.",
             quiz: {
-              question: "When should the customer schedule their first service checkup?",
-              options: ["Only when an emergency or warning light appears", "At 5,000 miles or 6 months for inspection and fluid care", "After the warranty period expires completely"],
+              question: "¿Cuándo debe programarse la primera revisión de servicio?",
+              options: ["Solo cuando aparezca una avería o testigo de emergencia", "A los 8.000 km o 6 meses para revisión preventiva", "Cuando haya vencido por completo la garantía"],
               correctOptionIndex: 1
             }
           },
           {
             id: "l6",
-            title: "Securing 5-Star CSIs (Customer Satisfaction Index)",
-            content: "A perfect CSI score is mandatory for dealership rewards. Explain the survey scale to the buyer clearly, ask if there were any unresolved concerns, and secure commitment to excellent feedback.",
+            title: "Calidad Percibida y Encuestas de Satisfacción",
+            content: "La satisfacción del cliente impacta directamente en reputación, recompra y estándares de red. Explique de forma transparente la encuesta, pregunte si queda alguna duda sin resolver y cierre la entrega asegurando que el cliente se marcha con una experiencia clara y completa.",
             quiz: {
-              question: "What is the correct way to request high CSI ratings from buyers?",
-              options: ["Beg them or offer cash bribes directly", "Explain the survey's importance, ask if they have any doubts, and resolve them before delivery", "Do not mention the survey at all"],
+              question: "¿Cuál es la forma correcta de reforzar una buena valoración de satisfacción?",
+              options: ["Presionar al cliente u ofrecer incentivos inapropiados", "Explicar la importancia de la encuesta, resolver dudas y cerrar una experiencia impecable", "No mencionar nunca la encuesta ni comprobar satisfacción"],
               correctOptionIndex: 1
             }
           }

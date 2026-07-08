@@ -453,7 +453,7 @@ export default function AIReviewView({
             </div>
 
             <p className="text-xs text-slate-500 leading-relaxed">
-              Como Training Manager, debe validar que el borrador del curso de **Noa Motors** respete las directrices comerciales, de posventa y normativas antes de distribuirlo de manera pública.
+              Como responsable de formación, debe validar que el borrador del curso de **Noa Motors** respete las directrices comerciales, de posventa y normativas antes de distribuirlo de manera pública.
             </p>
 
             {/* Checklist Items */}
