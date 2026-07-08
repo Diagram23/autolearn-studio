@@ -38,7 +38,7 @@ export default function CreateCourseView({
   const [fileName, setFileName] = useState<string | null>(null);
   const [uploadedFile, setUploadedFile] = useState<{ name: string; base64: string; mimeType: string } | null>(null);
 
-  // API Call state
+  // Prototype AI simulation state
   const [isGenerating, setIsGenerating] = useState(false);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const [generationLogs, setGenerationLogs] = useState<string[]>([]);
@@ -114,7 +114,7 @@ export default function CreateCourseView({
     const isPdf = file.type === "application/pdf";
     const isText = file.type.startsWith("text/") || file.name.endsWith(".txt") || file.name.endsWith(".md");
 
-    // Convert to Base64 to send as inlineData to Gemini
+    // Keep file metadata local so the prototype can show an honest upload flow.
     const base64Reader = new FileReader();
     base64Reader.onload = (event) => {
       if (event.target?.result) {
@@ -141,11 +141,11 @@ export default function CreateCourseView({
       };
       textReader.readAsText(file);
     } else if (isPdf) {
-      setMaterials(`[Documento PDF de Noa Motors Cargado: ${file.name}]\n\nEste archivo PDF se procesará directamente utilizando las capacidades de análisis de documentos extensos de Gemini.`);
+      setMaterials(`[Documento PDF de Noa Motors cargado: ${file.name}]\n\nEn esta demo, el archivo se mantiene local y se usa para simular el flujo de análisis de documentos de una plataforma con IA.`);
     } else if (isImage) {
-      setMaterials(`[Especificación Visual / Imagen de Red de Noa Motors Cargada: ${file.name}]\n\nEsta imagen se procesará directamente utilizando las capacidades de visión artificial avanzada de Gemini.`);
+      setMaterials(`[Especificación visual / imagen de red de Noa Motors cargada: ${file.name}]\n\nEn esta demo, la imagen se mantiene local y se usa para simular el flujo de análisis visual asistido por IA.`);
     } else {
-      setMaterials(`[Archivo de Origen Cargado: ${file.name}]\n\nSe procesará mediante el análisis avanzado de Gemini AI.`);
+      setMaterials(`[Archivo de origen cargado: ${file.name}]\n\nEn esta demo, el archivo se mantiene local y se usa para simular el flujo de análisis asistido por IA.`);
     }
   };
 
@@ -177,7 +177,7 @@ export default function CreateCourseView({
     setErrorMsg(null);
     setActiveStep(2);
 
-    setGenerationLogs(["Iniciando tubería de procesamiento de AutoLearn...", "Estableciendo conexión segura con Gemini AI..."]);
+    setGenerationLogs(["Iniciando simulación de procesamiento de AutoLearn...", "Preparando estructura pedagógica del prototipo..."]);
     
     const logsInterval = setInterval(() => {
       const logOptions = [
@@ -262,7 +262,7 @@ export default function CreateCourseView({
           </div>
           <div>
             <span className={`text-xs font-bold block ${activeStep === 2 ? "text-red-600" : "text-slate-500"}`}>2. Procesamiento IA</span>
-            <span className="text-[11px] text-slate-400">Gemini diseña el temario</span>
+            <span className="text-[11px] text-slate-400">Simulación estructura el temario</span>
           </div>
         </div>
 
@@ -439,7 +439,7 @@ export default function CreateCourseView({
                 <span>Cómo opera la plataforma</span>
               </div>
               <p className="text-xs text-slate-500 leading-relaxed">
-                Suba circulares técnicas o directrices de marca. La plataforma utiliza el motor **Gemini 3.5-Flash** para sintetizar y estructurar la información en 3 unidades formativas lógicas.
+                Suba circulares técnicas o directrices de marca. En este prototipo, AutoLearn simula cómo un motor de IA sintetizaría la información y la convertiría en 3 unidades formativas lógicas.
               </p>
               <p className="text-xs text-slate-500 leading-relaxed">
                 Cada módulo resultante cuenta con un bloque educativo estructurado, guiones argumentativos enfocados a ventas o resolución de problemas, y pruebas didácticas integradas de opción múltiple.
@@ -482,7 +482,7 @@ export default function CreateCourseView({
           <div className="max-w-md mx-auto space-y-2">
             <h2 className="text-base font-bold text-slate-800 tracking-tight">AutoLearn IA está redactando el temario...</h2>
             <p className="text-xs text-slate-500 leading-relaxed">
-              Gemini está sintetizando las fichas técnicas, programando las evaluaciones del módulo y creando las guías de ventas. Este proceso toma entre 5 y 8 segundos de procesamiento.
+              El prototipo está simulando la síntesis de fichas técnicas, evaluaciones de módulo y guías de ventas. Este proceso toma entre 5 y 8 segundos para representar un flujo real de IA.
             </p>
           </div>
 
@@ -500,7 +500,7 @@ export default function CreateCourseView({
             </div>
           </div>
 
-          <p className="text-[11px] text-slate-400 font-bold tracking-widest uppercase">Motor de Inteligencia de Noa Motors</p>
+          <p className="text-[11px] text-slate-400 font-bold tracking-widest uppercase">Simulación de Inteligencia de Noa Motors</p>
         </div>
       )}
 

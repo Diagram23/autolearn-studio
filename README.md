@@ -6,7 +6,7 @@ Módulos: Dashboard, Cursos, Crear Curso, AI Review Studio, Empleados, Analític
 
 ## Arquitectura
 
-Sitio 100% estático (React + Vite + TypeScript, sin backend). Todo el contenido es mock data. Las funciones de "IA" (generación de curso y simulador de objeciones con cliente virtual) se simulan en el cliente en `src/lib/mockAI.ts`, con una latencia artificial vía `setTimeout` para conservar la sensación de procesamiento real. No hay llamadas de red ni claves de API involucradas.
+Sitio 100% estático (React + Vite + TypeScript, sin backend). Todo el contenido es mock data. Las funciones de "IA" son una simulación de prototipo: generación de curso, análisis de archivos y simulador de objeciones se resuelven en el cliente desde `src/lib/mockAI.ts`, con latencia artificial vía `setTimeout` para representar el procesamiento de una plataforma real. No hay llamadas de red, claves de API, login ni base de datos.
 
 ## Correr en local
 

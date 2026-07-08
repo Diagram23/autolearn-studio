@@ -314,7 +314,7 @@ export default function StudentView({
                 : "border-transparent text-slate-400 hover:text-slate-700"
             }`}
           >
-            <BrainCircuit className="w-3.5 h-3.5" /> Simulador de Objeciones con IA
+            <BrainCircuit className="w-3.5 h-3.5" /> Simulador IA de Objeciones
           </button>
         </div>
       )}
@@ -685,10 +685,10 @@ export default function StudentView({
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                 <div>
                   <h3 className="text-sm font-bold text-slate-800 flex items-center gap-2">
-                    <Sparkles className="w-5 h-5 text-red-600 animate-pulse" /> Simulador de Objeciones con Inteligencia Artificial
+                    <Sparkles className="w-5 h-5 text-red-600 animate-pulse" /> Simulador IA de Objeciones
                   </h3>
                   <p className="text-xs text-slate-500 mt-0.5">
-                    Practica situaciones de venta complejas y gestión de reclamaciones difíciles. La IA evaluará tus respuestas comerciales, tu tono y tu conformidad legal en tiempo real.
+                    Practica situaciones de venta complejas y gestión de reclamaciones difíciles. La simulación IA evaluará tus respuestas comerciales, tu tono y tu conformidad legal dentro de esta demo.
                   </p>
                 </div>
                 {roleplayStep !== "setup" && (
@@ -754,11 +754,11 @@ export default function StudentView({
                     <div className="bg-slate-900 text-white rounded-2xl p-6 space-y-5 shadow-xs flex flex-col justify-between h-full min-h-[300px]">
                       <div className="space-y-4">
                         <div className="bg-red-600/30 border border-red-500/30 text-red-200 text-[11px] font-bold px-2.5 py-1 rounded-md uppercase tracking-wider inline-block">
-                          Entrenamiento IA • Noa Motors
+                          Entrenamiento IA Simulado • Noa Motors
                         </div>
                         <h4 className="text-sm font-bold tracking-tight">Directrices de la Simulación</h4>
                         <p className="text-xs text-slate-300 leading-relaxed">
-                          La IA interpretará con total realismo al cliente seleccionado. Deberás responder a sus dudas aplicando el conocimiento corporativo:
+                          La simulación IA interpretará al cliente seleccionado. Deberás responder a sus dudas aplicando el conocimiento corporativo:
                         </p>
                         <ul className="text-[11px] text-slate-400 space-y-2 pl-3 list-disc">
                           <li>Mantén la máxima cordialidad y empatía de marca.</li>
@@ -824,7 +824,7 @@ export default function StudentView({
                         disabled={chatHistory.length < 2 || isGeneratingResponse}
                         className="w-full bg-slate-900 hover:bg-slate-800 disabled:bg-slate-100 text-white disabled:text-slate-400 text-xs font-bold py-2.5 rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-sm"
                       >
-                        <Sparkles className="w-3.5 h-3.5" /> Solicitar Auditoría de IA
+                        <Sparkles className="w-3.5 h-3.5" /> Solicitar Auditoría Simulada
                       </button>
                     </div>
                   </div>

@@ -95,7 +95,7 @@ export default function CaseStudyView({ onExploreProduct }: CaseStudyViewProps) 
   const principles = [
     {
       title: "Confianza antes que automatización",
-      description: "La IA propone, la persona decide. Cada borrador pasa por una auditoría explícita antes de llegar a un empleado real.",
+      description: "El flujo propuesto usa IA como asistente, no como autoridad final. Cada borrador pasa por una auditoría explícita antes de llegar a un empleado real.",
       icon: ShieldCheck,
     },
     {
@@ -112,6 +112,25 @@ export default function CaseStudyView({ onExploreProduct }: CaseStudyViewProps) 
       title: "Cobertura total de estados",
       description: "Vacío, cargando, error, éxito y sin permisos están diseñados desde el primer momento, no añadidos al final.",
       icon: MonitorSmartphone,
+    },
+  ];
+
+  const presentationSummary = [
+    {
+      title: "Problema",
+      description: "Los equipos reciben PDFs, manuales y circulares dispersas, pero no tienen un sistema rápido para convertir ese material en formación consistente y medible.",
+    },
+    {
+      title: "Proceso UX",
+      description: "Mapeé roles, fricciones y puntos de control: carga de contenido, generación simulada, revisión humana, publicación por rol y seguimiento de desempeño.",
+    },
+    {
+      title: "Decisión de diseño",
+      description: "La interfaz prioriza confianza: navegación superior, paneles compactos, estados claros y auditoría obligatoria antes de publicar cualquier curso.",
+    },
+    {
+      title: "Resultado esperado",
+      description: "El prototipo muestra cómo una empresa podría reducir tiempo de creación, mejorar consistencia de marca y detectar empleados que necesitan refuerzo.",
     },
   ];
 
@@ -135,7 +154,7 @@ export default function CaseStudyView({ onExploreProduct }: CaseStudyViewProps) 
           <div className="relative w-10 h-10 mx-auto mb-3">
             <div className="absolute inset-0 rounded-full border-4 border-slate-700 border-t-red-500 animate-spin" />
           </div>
-          <p className="text-xs font-bold text-white">Generando plan de estudio con IA...</p>
+          <p className="text-xs font-bold text-white">Simulando generación de plan de estudio...</p>
           <p className="text-[11px] text-slate-400 mt-1">Estructurando módulos y evaluaciones</p>
         </div>
       ),
@@ -190,10 +209,10 @@ export default function CaseStudyView({ onExploreProduct }: CaseStudyViewProps) 
           </span>
           <h1 className="text-2xl md:text-3xl font-black tracking-tight">AutoLearn Studio</h1>
           <p className="text-sm text-slate-300 leading-relaxed">
-            Una plataforma de capacitación asistida por IA para grupos de concesionarios, diseñada para transformar
+            Una simulación de plataforma de capacitación asistida por IA para grupos de concesionarios, diseñada para transformar
             manuales técnicos, políticas de garantía y guiones comerciales en cursos estructurados, con supervisión
             humana en cada paso. Este prototipo (Noa Motors Academy) es un caso de estudio de diseño de producto
-            para SaaS B2B de formación corporativa.
+            para SaaS B2B de formación corporativa, no una integración de IA productiva.
           </p>
           <div className="flex flex-wrap gap-2 pt-1">
             {["Product Thinking", "B2B SaaS", "AI-assisted workflows", "Design System"].map((tag) => (
@@ -208,6 +227,29 @@ export default function CaseStudyView({ onExploreProduct }: CaseStudyViewProps) 
           >
             Explorar el Producto <ArrowRight className="w-3.5 h-3.5" />
           </button>
+        </div>
+      </div>
+
+      {/* Portfolio summary */}
+      <div className="bg-white rounded-2xl border border-slate-200/50 p-6 shadow-xs space-y-5">
+        <div>
+          <h2 className="text-sm font-bold text-slate-950 tracking-tight flex items-center gap-2">
+            <Target className="w-4 h-4 text-red-600" /> Resumen para Presentación
+          </h2>
+          <p className="text-xs text-slate-500 mt-0.5">
+            Lectura rápida del caso para reclutadores y equipos de producto: problema, proceso, decisiones y valor.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-3">
+          {presentationSummary.map((item, idx) => (
+            <div key={item.title} className="bg-slate-50/70 border border-slate-100 rounded-xl p-4 space-y-2">
+              <div className="flex items-center justify-between">
+                <span className="text-[11px] font-black text-red-600 uppercase tracking-wider">{item.title}</span>
+                <span className="text-[10px] font-black text-slate-300">0{idx + 1}</span>
+              </div>
+              <p className="text-xs text-slate-600 leading-relaxed">{item.description}</p>
+            </div>
+          ))}
         </div>
       </div>
 
@@ -230,8 +272,8 @@ export default function CaseStudyView({ onExploreProduct }: CaseStudyViewProps) 
           </div>
           <h3 className="text-xs font-bold text-slate-900 uppercase tracking-wider">La Oportunidad</h3>
           <p className="text-xs text-slate-500 leading-relaxed">
-            La IA generativa puede reducir de días a minutos el tiempo de estructurar un curso, siempre que la
-            plataforma mantenga un paso de revisión humana claro para proteger la marca y el cumplimiento normativo.
+            Un flujo de IA generativa podría reducir de días a minutos el tiempo de estructurar un curso, siempre que
+            la plataforma mantenga un paso de revisión humana claro para proteger la marca y el cumplimiento normativo.
           </p>
         </div>
         <div className="bg-white rounded-2xl border border-slate-200/50 p-5 shadow-xs space-y-2">
@@ -392,9 +434,9 @@ export default function CaseStudyView({ onExploreProduct }: CaseStudyViewProps) 
       <div className="bg-slate-50 border border-slate-200/60 rounded-2xl p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
         <p className="text-xs text-slate-500 leading-relaxed max-w-2xl">
           <strong className="text-slate-700">Notas técnicas:</strong> prototipo construido en React + Vite + TypeScript
-          con Tailwind, usando datos simulados (sin backend real, login ni base de datos). El generador de cursos
-          incluye una ruta de respaldo local cuando no hay una clave de API configurada, para que la demo funcione
-          de forma autónoma.
+          con Tailwind, usando datos simulados (sin backend real, login, base de datos ni claves de API). El generador
+          de cursos, la carga de archivos y el roleplay son simulaciones locales pensadas para demostrar UX, estados
+          y lógica de producto de una futura integración real.
         </p>
         <button
           onClick={onExploreProduct}

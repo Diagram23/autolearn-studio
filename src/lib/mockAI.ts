@@ -1,16 +1,12 @@
 /**
  * Motor de simulación de IA — 100% en el cliente.
  *
- * AutoLearn Studio es un prototipo de portfolio: no existe backend real.
- * Esta capa reemplaza lo que antes era una llamada de red a un servidor
- * Express (server.ts -> /api/generate-course, /api/roleplay,
- * /api/roleplay-evaluate). La misma lógica de "fallback" que ya existía
- * en el servidor cuando no había GEMINI_API_KEY configurada se movió
- * aquí sin cambios de contenido, solo de ubicación.
+ * AutoLearn Studio es un prototipo de portfolio: no existe backend real,
+ * clave de API, login ni base de datos.
  *
- * Cualquier `fetch()` se sustituye por una promesa resuelta con
- * `setTimeout`, para conservar la sensación de "la IA está procesando"
- * sin depender de ningún servidor.
+ * Esta capa simula las respuestas que produciría un flujo de IA real usando
+ * promesas con `setTimeout`. Así la demo mantiene un comportamiento creíble
+ * sin transmitir archivos ni depender de servicios externos.
  */
 
 export interface GeneratedQuiz {
@@ -46,7 +42,7 @@ function simulateDelay<T>(result: T, ms: number): Promise<T> {
 
 /**
  * Genera un curso de ejemplo estructurado en 3 módulos.
- * Idéntico al fallback que existía en server.ts (generateMockupCourse).
+ * Contenido determinista para mostrar el resultado esperado de un generador real.
  */
 export function generateMockupCourse(title: string, category: string): GeneratedCourse {
   return {
@@ -139,7 +135,7 @@ export function generateMockupCourse(title: string, category: string): Generated
 }
 
 /**
- * Simula la generación de un curso completo con IA (antes: POST /api/generate-course).
+ * Simula la generación de un curso completo con IA.
  * `delayMs` controla cuánto "procesa" el mock (por defecto entre 4.5s y 6.5s,
  * igual que el rango percibido en la demo original).
  */
