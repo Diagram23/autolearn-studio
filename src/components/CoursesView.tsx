@@ -182,10 +182,10 @@ export default function CoursesView({
                       </span>
                     </div>
 
-                    <h3 className="text-sm font-bold text-slate-900 tracking-tight">{course.title}</h3>
-                    <p className="text-xs text-slate-500 line-clamp-2 max-w-2xl leading-relaxed">{course.description || "Sin descripción proporcionada."}</p>
+                    <h3 className="text-base font-bold text-slate-900 tracking-tight">{course.title}</h3>
+                    <p className="text-sm text-slate-500 line-clamp-2 max-w-3xl leading-6">{course.description || "Sin descripción proporcionada."}</p>
                     
-                    <div className="flex flex-wrap items-center gap-x-4 gap-y-1 pt-1 text-xs text-slate-400 font-medium">
+                    <div className="flex flex-wrap items-center gap-x-4 gap-y-1 pt-1 text-[13px] text-slate-400 font-medium">
                       <span className="flex items-center gap-1">
                         <BookOpen className="w-3.5 h-3.5 text-slate-400" /> {course.modules.length} módulos ({totalLessons} lecciones)
                       </span>
@@ -252,7 +252,7 @@ export default function CoursesView({
                 {/* Expanded Modules Area */}
                 {isExpanded && (
                   <div className="bg-slate-50/70 border-t border-slate-100 p-5 rounded-b-2xl space-y-4">
-                    <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Desglose de Unidades Formativas</h4>
+                    <h4 className="text-[13px] font-bold text-slate-400 uppercase tracking-wider mb-2">Desglose de Unidades Formativas</h4>
                     
                     {course.modules.length === 0 ? (
                       <p className="text-xs text-slate-400 italic">Este curso aún no contiene unidades formativas.</p>
@@ -263,8 +263,8 @@ export default function CoursesView({
                             <div className="flex items-start justify-between">
                               <div>
                                 <h5 className="text-[10px] font-bold text-red-600 uppercase tracking-widest">MÓDULO {idx + 1}</h5>
-                                <h4 className="text-xs font-bold text-slate-800">{mod.title}</h4>
-                                <p className="text-xs text-slate-500 mt-0.5">{mod.description}</p>
+                                <h4 className="text-sm font-bold text-slate-800">{mod.title}</h4>
+                                <p className="text-[13px] text-slate-500 mt-1 leading-5">{mod.description}</p>
                               </div>
                             </div>
 
@@ -272,25 +272,25 @@ export default function CoursesView({
                             <div className="pl-3 border-l-2 border-red-500 space-y-3">
                               {mod.lessons.map((lesson, lIdx) => (
                                 <div key={lesson.id} className="space-y-1">
-                                  <h5 className="text-xs font-bold text-slate-800 flex items-center gap-1.5">
-                                    <span className="w-4 h-4 rounded-full bg-red-50 text-red-600 flex items-center justify-center text-[11px] font-bold">
+                                  <h5 className="text-sm font-bold text-slate-800 flex items-center gap-1.5">
+                                    <span className="w-5 h-5 rounded-full bg-red-50 text-red-600 flex items-center justify-center text-xs font-bold">
                                       {lIdx + 1}
                                     </span>
                                     {lesson.title}
                                   </h5>
-                                  <p className="text-xs text-slate-600 leading-relaxed pl-5 whitespace-pre-wrap">
+                                  <p className="text-[13px] md:text-sm text-slate-600 leading-6 pl-6 whitespace-pre-wrap">
                                     {lesson.content}
                                   </p>
                                   {lesson.quiz && (
                                     <div className="ml-5 bg-slate-50 border border-slate-200/60 rounded-xl p-3.5 mt-2">
-                                      <p className="text-xs font-bold text-slate-700 flex items-center gap-1">
+                                      <p className="text-[13px] font-bold text-slate-700 flex items-center gap-1">
                                         <HelpCircle className="w-3.5 h-3.5 text-red-500" /> Evaluación de Módulo: {lesson.quiz.question}
                                       </p>
                                       <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 mt-2">
                                         {lesson.quiz.options.map((opt, oIdx) => (
                                           <div 
                                             key={oIdx} 
-                                            className={`text-[11px] p-2 rounded-lg border ${
+                                            className={`text-[13px] leading-5 p-3 rounded-lg border ${
                                               oIdx === lesson.quiz.correctOptionIndex 
                                                 ? "bg-emerald-50 border-emerald-200 text-emerald-800 font-bold" 
                                                 : "bg-white border-slate-100 text-slate-500"
